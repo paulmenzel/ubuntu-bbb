@@ -1,0 +1,4 @@
+set -x
+env
+
+wget https://github.com/paulmenzel/bbb-install/raw/install-docker-and-docker-compose-from-ubuntu-archives/bbb-install.sh

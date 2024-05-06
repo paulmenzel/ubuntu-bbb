@@ -1,0 +1,10 @@
+set -x
+env
+USER=bbb
+USER_PASSWORD_FILE=mkosi.user_pw
+
+echo /etc/os-release
+useradd --create-home --user-group $USER --password "$(openssl passwd -stdin -6 <$USER_PASSWORD_FILE)" --shell bash
+wget https://github.com/paulmenzel/bbb-install/raw/install-docker-and-docker-compose-from-ubuntu-archives/bbb-install.sh
+chown bbb: bbb-install.sh
+adduser bbb sudo
